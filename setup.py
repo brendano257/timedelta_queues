@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='devutils',
+    name='timedelta_queues',
     url='https://github.com/brendano257/timedelta_queues',
     author='Brendan Blanchard',
     author_email='brendano257@gmail.com',
