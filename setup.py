@@ -5,7 +5,7 @@ setup(
     url='https://github.com/brendano257/timedelta_queues',
     author='Brendan Blanchard',
     author_email='brendano257@gmail.com',
-    packages=[],
+    packages=['timedelta_queues'],
     install_requires=['numpy'],
     version='0.1',
     license='MIT',
