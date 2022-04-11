@@ -60,11 +60,17 @@ class FastWindowedStatsQueue(TimedeltaQueue):
 
     @property
     def mean(self) -> float:
-        return self._sum / self._n
+        try:
+            return self._sum / self._n
+        except ZeroDivisionError:
+            return np.nan
 
     @property
     def std(self) -> float:
-        return np.sqrt(self._sum_squares / self._n - (self._sum / self._n)**2)
+        try:
+            return np.sqrt(self._sum_squares / self._n - (self._sum / self._n)**2)
+        except ZeroDivisionError:
+            return np.nan
 
     def append(self, obj: Any) -> list[Any]:
         """
